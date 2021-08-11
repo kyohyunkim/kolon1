@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">A</a>
+            <a href="#">B</a>
+            <a href="#">C</a>
+            <a href="#">D</a>
+            <a href="#">E</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contents">
+            <figure class="active"><img src="img/aie1.jpg"></figure>
+            
+            <figure><img src="img/bad1.jpg"></figure>
+            
+            <figure><img src="img/kaptain.jpg"></figure>
+            
+            <figure><img src="img/calol1.jpg"></figure>
+           
+            <figure><img src="img/south2.jpg"></figure>
+            
+        </div>
+    </main>
+
+    <a href="#"><aside>Top</aside></a>
+
+    <style>
+        html{scroll-behavior: smooth;}
+        body{
+            margin: 0;
+        }
+        header{
+            position: fixed;
+            left: 0; top: 0;
+            background-color: green;
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 999;
+        }
+        header a{
+            color: green;
+            text-decoration: none;
+            font-size: 2rem;
+            margin:0 40px;
+            background-color:khaki;
+            padding:10px 22px;
+            border-radius: 100%;
+
+        }
+        main{
+            height: 3000px;
+        }
+        aside{
+            position: fixed;
+            right: 0; bottom: 0;
+            background-color: green;
+            color: white;
+            padding: 20px;
+            display: none;
+        }
+        aside.active{
+            display: block;
+        }
+
+        figure img{border-radius: 100%;}
+
+        figure{
+            margin:300px 0;
+            opacity:0;transition:1s;
+            text-align: center;
+            transform:translateY(200px);
+        }
+        figure.active{
+            opacity:1;
+            transform:translateY(0px);
+        }
+        
+        
+    </style>
+
+    <script>
+        const elHeader = document.querySelector("header");
+        const elAside = document.querySelector("aside");
+
+            window.addEventListener("scroll", () => {
+
+            // console.log(document.body.scrollHeight);  document.body.scrollHeight 얘는 body에 높이 값.
+            // console.log(this.scrollY);  this.scrollY 스크롤이 움직인 양
+            // console.log(window.innerHeight < window.scrollY); inner => 당장 보이는 화면 높이, scrollY 스크롤값 / 이크기들로 사이드창 조절 가능
+            
+            let domHei = document.documentElement.offsetHeight;
+            let winHei = window.innerHeight;
+
+            console.log(domHei); //main 높이값 3000나옴
+            console.log(winHei); //브라우저의 높이값 노트북은 775나옴
+            console.log(domHei - winHei); // 이값은 window.scrollY 값과 같다. 
+            
+            if(domHei - winHei <= window.scrollY){ //스크롤이 최하단으로 갔을떄만 true 나옴
+                console.log("문서 최하단 위치");
+            }
+            if(winHei < window.scrollY){ 
+                elAside.classList.add("active");
+                //이거 toggle로 하면 계속 깜밖거림
+            }else{
+                elAside.classList.remove("active");
+            }
+            
+        });
+
+        const elImg = document.querySelectorAll('figure');
+        const elSpan = document.querySelectorAll('content div span');
+        let elHeight;
+        let winHei = window.innerHeight;
+
+        window.addEventListener('scroll',function(){
+            for(let i=0; i<elImg.length; i++){
+                elHeight = elImg[i].offsetTop;
+
+                if(elHeight-winHei <= window.scrollY){
+                    elImg[i].classList.add('active');
+                }
+            }
+            
+        })
+    </script>
+</body>
+</html>
