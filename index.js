@@ -1,3 +1,79 @@
+    //side-menu------------------------------------------
+
+    const elSide = document.querySelector('.side_menu .nav');
+    const elA = document.querySelectorAll('.side_menu .nav li a');
+    const elA1 = document.querySelectorAll('.side_menu .nav li:nth-of-type(1) a');
+    const elMain = document.querySelector('main');
+    const elScon2 = document.querySelector('.con2');
+    const elScon3 = document.querySelector('.con3');
+    const elScon4 = document.querySelector('.con4');
+    const elPort1 = document.querySelector('.port');
+
+
+    window.addEventListener('scroll',function(){
+
+        let winHei = window.innerHeight;
+        let elMain1 = elSide.offsetTop;
+        let elMain2 = elSide.offsetTop + 800;
+        let elCon2Height = elScon2.offsetTop + 400;
+        let elCon2Height2 = elScon2.offsetTop + 700;
+        let elCon3Height = elScon3.offsetTop + 400;
+        let elCon3Height2 = elScon3.offsetTop + 700;
+        let elCon4Height = elScon4.offsetTop + 400;
+        let elPortHei = elPort1.offsetTop;
+       
+            if(elMain1-winHei <= window.scrollY && window.scrollY <= elMain2){
+                elA[3].classList.add('active');
+            }else{
+                elA[3].classList.remove('active');
+            }
+            if(elCon2Height-winHei <= window.scrollY && window.scrollY <= elCon2Height2){
+                elA[2].classList.add('active');
+            }else{
+                elA[2].classList.remove('active');
+            }
+
+            if(elCon3Height-winHei <= window.scrollY && window.scrollY <= elCon3Height2){
+                elA[1].classList.add('active');
+            }else{
+                elA[1].classList.remove('active');
+            }
+
+            if(elCon4Height-winHei <= window.scrollY){
+                elA[0].classList.add('active');
+            }else{
+                elA[0].classList.remove('active');
+            }
+            if(elPortHei-winHei <= window.scrollY){
+                elSide.classList.add('active');
+            }else{
+                elSide.classList.remove('active');
+            }
+    })
+
+    console.log(elA);
+
+    elA[0].addEventListener('click',function(){
+        let elCon4Height = elScon4.offsetTop - 200;
+        window.scrollTo({top:elCon4Height, behavior:'smooth'});
+    })
+    elA[1].addEventListener('click',function(){
+        let elCon3Height = elScon3.offsetTop - 200;
+        window.scrollTo({top:elCon3Height, behavior:'smooth'});
+    })
+    elA[2].addEventListener('click',function(){
+        let elCon2Height = elScon2.offsetTop - 200;
+        window.scrollTo({top:elCon2Height, behavior:'smooth'});
+    })
+    elA[3].addEventListener('click',function(){
+        // let winHei = window.innerHeight;
+        window.scrollTo({top:0, behavior:'smooth'});
+    })
+
+
+    
+    
+    
     // ----------buger-----------------------------------
     const elBuger = document.querySelector('.menu-trigger');
     const elNav = document.querySelector('.nav');
@@ -50,6 +126,7 @@
     }
     });
     //---------animation_con1--------------------------
+    const elSide1 = document.querySelector('.side_menu div .nav');
     const elCon1text1 = document.querySelectorAll('.con1 .bigText-1 ul li');
     const elCon1text2 = document.querySelectorAll('.con1 .bigText-2 ul li');
     const elCon1text3 = document.querySelectorAll('.con1 .smallText-1 ul li');
@@ -60,9 +137,11 @@
     const elPerson = document.querySelector('.bg-img1 .person-img');
     const elLine = document.querySelector('.bg-img1 .line-img');
     const elDivtext = document.querySelector('.bg-img1 div');
+
+    console.log(elSide1);
     
-    // console.log(elBtnline);
-    
+    //side_menu//
+
     //CON-1 글씨-ani//
     setTimeout(() => {
         for(let i=0; i<elCon1text1.length; i++){
@@ -77,6 +156,8 @@
             elPerson.classList.add('active');
             elLine.classList.add('active');
             elDivtext.classList.add('active');
+            elSide1.classList.add('active1');
+            elA[3].classList.add('active');
         
     }, 800);
 
@@ -104,7 +185,7 @@
         }else{
             elBtntext.classList.remove('active');
         }
-        }, 1000);
+        }, 500);
         if(elBtnHei-winHei <= window.scrollY){              
             elBtnline.classList.add('active');   
         }else{
@@ -194,7 +275,7 @@
     
     //이미지 에니메이션
     setTimeout(() => {
-        if(elCon3Top*1.25 - winHei <= window.scrollY  && window.scrollY <= elCon3Bottom ){
+        if(elCon3Top*1.2 - winHei <= window.scrollY  && window.scrollY <= elCon3Bottom ){
             elPerson3.classList.add('active');
             elLine3.classList.add('active');
             elText3.classList.add('active');
@@ -351,7 +432,7 @@
     window.addEventListener('scroll',function(){
         
         let winHei = window.innerHeight;
-        let elHeight = elYellow.offsetTop + 400;
+        let elHeight = elYellow.offsetTop + 200;
 
         setTimeout(() => {
             if(elHeight-winHei <= window.scrollY){

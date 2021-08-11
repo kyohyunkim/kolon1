@@ -18,6 +18,7 @@ main{
         // position: fixed;
         z-index: 9999;
         transform: translateY(10px);
+
         .logo{
             margin-top:0;
             a{
@@ -31,6 +32,7 @@ main{
             padding-top: 50px;
             transform: translateY(-30px);
         }
+
         // ------------------------------------------------------------------
         .buger{
             .menu-trigger{
@@ -190,6 +192,51 @@ main{
                 }
             }
         }
+    }
+
+    .side_menu{
+        z-index: 999;
+        position: fixed;
+        width:100vh;
+        padding:95px 0px 0 120px ;
+        transform: rotate(-90deg);
+        top:0; left:0;
+        height: 100vh;
+        div{
+            overflow:hidden;
+           .nav{
+            opacity: 1;
+            transition: .5s;
+            opacity: 0;
+            transform: translateY(40px);
+            &.active1{
+                transform: translateY(0);
+                opacity: 1;
+            }
+            &.active{
+                opacity: 0;
+            }
+                li{
+                    margin-left:50px;
+                    display: inline-block;
+                    a{
+                        font-weight: 600;
+                        cursor: pointer;
+                        color:#bbb;
+                        z-index: 999;
+                        transition: .5s;
+                        &.active{
+                            font-weight: 600;
+                            color:#000;
+                        }
+                    }
+                }
+                li:nth-of-type(1){
+                    font-weight: 500;
+                }
+            } 
+        }
+        
     }
     // ------------------------------------------------------------------
     .fixed-img{
@@ -353,6 +400,7 @@ main{
                
     }
     .con1{
+        height: 100vh;
         .bigText-1{
             @include bigText_1;
             ul{
@@ -412,6 +460,7 @@ main{
         }
     }
     .con2{
+        height: 100vh;
         .bigText-2{
             @include bigText_2;
             margin-top: 300px;
@@ -454,6 +503,7 @@ main{
         }
     }
     .con3{
+        height: 100vh;
         .bigText-2{
             @include bigText_2;
             margin-top: 300px;
@@ -495,6 +545,7 @@ main{
         }
     }
     .con4{
+        height: 100vh;
         .bigText-2{
             @include bigText_2;
             margin-top: 300px;

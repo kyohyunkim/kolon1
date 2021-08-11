@@ -282,6 +282,64 @@ main header .buger .nav .nav-small-text-2 span {
   font-weight: 100;
 }
 
+main .side_menu {
+  z-index: 999;
+  position: fixed;
+  width: 100vh;
+  padding: 95px 0px 0 120px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+main .side_menu div {
+  overflow: hidden;
+}
+
+main .side_menu div .nav {
+  opacity: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+}
+
+main .side_menu div .nav.active1 {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+main .side_menu div .nav.active {
+  opacity: 0;
+}
+
+main .side_menu div .nav li {
+  margin-left: 50px;
+  display: inline-block;
+}
+
+main .side_menu div .nav li a {
+  font-weight: 600;
+  cursor: pointer;
+  color: #bbb;
+  z-index: 999;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+main .side_menu div .nav li a.active {
+  font-weight: 600;
+  color: #000;
+}
+
+main .side_menu div .nav li:nth-of-type(1) {
+  font-weight: 500;
+}
+
 main .fixed-img {
   position: -webkit-sticky;
   position: sticky;
@@ -500,6 +558,10 @@ main .fixed-img .bg-img4 div.active {
   opacity: 1;
 }
 
+main .con1 {
+  height: 100vh;
+}
+
 main .con1 .bigText-1 {
   margin: -40% 0 5% 15%;
 }
@@ -615,6 +677,10 @@ main .con1 .btn a {
   position: relative;
 }
 
+main .con2 {
+  height: 100vh;
+}
+
 main .con2 .bigText-2 {
   margin: 0 0 0 15%;
   margin-top: 300px;
@@ -705,6 +771,10 @@ main .con2 .btn a {
   position: relative;
 }
 
+main .con3 {
+  height: 100vh;
+}
+
 main .con3 .bigText-2 {
   margin: 0 0 0 15%;
   margin-top: 300px;
@@ -793,6 +863,10 @@ main .con3 .btn a {
   text-decoration: none;
   color: #000;
   position: relative;
+}
+
+main .con4 {
+  height: 100vh;
 }
 
 main .con4 .bigText-2 {
