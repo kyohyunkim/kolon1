@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1057,15 +1057,31 @@ main .con4 .btn a {
   width: 45%;
 }
 
-.port article .port_list_1 .cate1.cate1:nth-child(1) {
-  margin-bottom: 100px;
+.port article .port_list_1 .cate1.cate1:nth-of-type(1) {
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-.port article .port_list_1 .cate1.cate1:nth-child(2) {
-  margin-bottom: 100px;
+.port article .port_list_1 .cate1.cate1:nth-of-type(2) {
+  margin-top: 200px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.port article .port_list_1 .cate1.cate1:nth-of-type(3) {
+  margin-top: -80px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.port article .port_list_1 .cate1.cate1:nth-of-type(4) {
+  margin-top: 120px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .port article .port_list_1 .cate1 div {
+  height: 750px;
   position: relative;
   overflow: hidden;
 }
@@ -1082,6 +1098,19 @@ main .con4 .btn a {
   color: #fff;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.port article .port_list_1 .cate1 div .tx2 {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  padding-top: 630px;
+  text-align: right;
+  font-size: 5rem;
+  font-weight: 300;
+  color: #fff;
+  width: 95%;
+  cursor: pointer;
 }
 
 .port article .port_list_1 .cate1 div img {

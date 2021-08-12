@@ -53,21 +53,25 @@
 
     console.log(elA);
 
+    let elCon4Height = elScon4.offsetTop - 200;
+    let elCon3Height = elScon3.offsetTop - 200;
+    let elCon2Height = elScon2.offsetTop - 200;
+
+    function load(k){
+        window.scrollTo({top:k, behavior:'smooth'});
+    };
+
     elA[0].addEventListener('click',function(){
-        let elCon4Height = elScon4.offsetTop - 200;
-        window.scrollTo({top:elCon4Height, behavior:'smooth'});
+        load(elCon4Height);
     })
     elA[1].addEventListener('click',function(){
-        let elCon3Height = elScon3.offsetTop - 200;
-        window.scrollTo({top:elCon3Height, behavior:'smooth'});
+        load(elCon3Height);
     })
     elA[2].addEventListener('click',function(){
-        let elCon2Height = elScon2.offsetTop - 200;
-        window.scrollTo({top:elCon2Height, behavior:'smooth'});
+        load(elCon2Height);
     })
     elA[3].addEventListener('click',function(){
-        // let winHei = window.innerHeight;
-        window.scrollTo({top:0, behavior:'smooth'});
+        load(0);
     })
 
 
@@ -544,6 +548,47 @@
             }
         }, 600);
         
+    })
+
+    const elCate1 = document.querySelector('.cate1:nth-of-type(1)');
+    const elCate2 = document.querySelector('.cate1:nth-of-type(2)');
+    const elCate3 = document.querySelector('.cate1:nth-of-type(3)');
+    const elCate4 = document.querySelector('.cate1:nth-of-type(4)');
+
+    let pos = {y:0, y2:0, state:''}
+    
+    window.addEventListener('scroll',function(){
+
+        let elHeight = elPort.offsetTop;
+        let yy = elHeight - this.scrollY;
+
+
+        pos.y = window.scrollY;
+        if(pos.y > pos.y2){
+            pos.state = true;                
+        }else{
+            pos.state = false;
+        }
+        pos.y2 = pos.y;
+
+
+        setTimeout(() => {
+            if(pos.state){
+                yy = yy/20;
+            }else{
+                yy = yy/20;
+            }
+            elCate1.style.transform = `translateY(${-yy}px)`;
+            elCate3.style.transform = `translateY(${-yy}px)`;
+            elCate2.style.transform = `translateY(${yy}px)`;
+            elCate4.style.transform = `translateY(${yy}px)`;
+        }, 150);
+
+        
+
+        console.log(pos.state)
+        
+
     })
 
     
