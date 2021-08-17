@@ -153,6 +153,10 @@
         const elRight2 = document.querySelector('.right div .r-2');
         const elRight3 = document.querySelector('.right div .r-3');
 
+        const elDashed0 = document.querySelector('.dashed');
+        const elDashed1 = document.querySelector('.dashed2');
+        const elDashed2 = document.querySelector('.dashed3');
+
         window.addEventListener('scroll',function(){
 
             setTimeout(() => {
@@ -163,7 +167,7 @@
                         elCbig[i].classList.remove('active');
                     }
                 }
-            }, 500);
+            }, 1000);
 
             setTimeout(() => {
                     if(1844 <= window.scrollY){
@@ -171,59 +175,61 @@
                     }else{
                         elCone.classList.remove('active');
                     }
-            }, 500);
-
-            if(1844 <= window.scrollY){
-                elC3box.classList.add('active');
-            }else{
-                elC3box.classList.remove('active');
-            }
-
+            }, 1000);
+            
             setTimeout(() => {
+                if(1844 <= window.scrollY){
+                elC3box.classList.add('active');
+                }else{
+                    elC3box.classList.remove('active');
+                }
+            }, 500);
+            
+
+          
                 if(1844 <= window.scrollY){
                     elC_2_left.classList.add('active');
                     elC_2_left_p.classList.add('active');
                     elRight1.classList.add('active');
-                }else{
-                    elC_2_left.classList.remove('active');
-                    elC_2_left_p.classList.remove('active');
-                    elRight1.classList.remove('active');
-                }
-            }, 3000);
-
-            setTimeout(() => {
-                if(1844 <= window.scrollY){
                     elRight2.classList.add('active');
-                }else{
-                    elRight2.classList.remove('active');
-                }
-            }, 3500);
+                    elDashed0.classList.add('active');
+                    elDashed1.classList.add('active');
+                    elDashed2.classList.add('active');
 
-            setTimeout(() => {
-                if(1844 <= window.scrollY){
                     elC_3_left.classList.add('active');
                     elC_3_left_p.classList.add('active');
                     elRight3.classList.add('active');
                 }else{
+                    elC_2_left.classList.remove('active');
+                    elC_2_left_p.classList.remove('active');
+                    elRight1.classList.remove('active');
+                    elRight2.classList.remove('active');
+                    elDashed0.classList.remove('active');
+                    elDashed1.classList.remove('active');
+                    elDashed2.classList.remove('active');
+
                     elC_3_left.classList.remove('active');
                     elC_3_left_p.classList.remove('active');
                     elRight3.classList.remove('active');
                 }
-            }, 4000);
-            
         })
 
         //con3 leftcon u-1
         const elUs1 = document.querySelector('.con3 .box-2 .left_con1 .u-1 .st-1');
         const elUs3 = document.querySelector('.con3 .box-2 .left_con1 .u-1 .st-3');
-        const uSvgid = document.getElementById("cls-1");
-        const uSvgclass = document.getElementsByClassName("Layer_1");
+        const elSvg1 = document.querySelector('.u-1 .st-2 svg');
+        
         
         const elUto1 = document.querySelector('.con3 .box-2 .left_con1 .u-2 .st-1');
         const elUto2 = document.querySelector('.con3 .box-2 .left_con1 .u-2 .st-3');
+        const elSvg2 = document.querySelector('.u-2 .st-2 svg');
 
         const elUto3 = document.querySelector('.con3 .box-2 .left_con1 .u-3 .st-1');
         const elUto4 = document.querySelector('.con3 .box-2 .left_con1 .u-3 .st-3');
+        const elSvg3 = document.querySelector('.u-3 .st-2 svg');
+
+        const elWline1 = document.querySelector('.line1');
+        const elWline2 = document.querySelector('.line2');
         
         console.log(elUto1);
         window.addEventListener('scroll',function(){
@@ -232,24 +238,37 @@
                     elUs1.classList.add('active');
                     elUto1.classList.add('active');
                     elUto3.classList.add('active');
+                    elSvg1.classList.add('active');
+                    elSvg2.classList.add('active');
+                    elSvg3.classList.add('active');
+                    elWline1.classList.add('active');
+                    elWline2.classList.add('active');
+
+                    elUs3.classList.add('active');
+                    elUto2.classList.add('active');
+                    elUto4.classList.add('active');
+
+                    elUs3.classList.add('active');
+                    elUto2.classList.add('active');
+                    elUto4.classList.add('active');
                 }else{
                     elUs1.classList.remove('active');
                     elUto1.classList.remove('active');
                     elUto3.classList.remove('active');
-                }
+                    elSvg1.classList.remove('active');
+                    elSvg2.classList.remove('active');
+                    elSvg3.classList.remove('active');
+                    elWline1.classList.remove('active');
+                    elWline2.classList.remove('active');
 
-                setTimeout(() => {
-                    if(1844 <= window.scrollY){
-                        elUs3.classList.add('active');
-                        elUto2.classList.add('active');
-                        elUto4.classList.add('active');
-                    }else{
-                        elUs3.classList.remove('active');
-                        elUto2.classList.remove('active');
-                        elUto4.classList.remove('active');
-                    }
-                }, 1000);
-            
+                    elUs3.classList.remove('active');
+                    elUto2.classList.remove('active');
+                    elUto4.classList.remove('active');
+
+                    elUs3.classList.remove('active');
+                    elUto2.classList.remove('active');
+                    elUto4.classList.remove('active');
+                }
         })
         
 
@@ -301,86 +320,33 @@
                 }
             }, 1000);
             
-            setTimeout(() => {
                 if(4100 <= window.scrollY){
                     elC4img1.classList.add('active');
-                    elC4img3.classList.add('active');
-                }else{
-                    elC4img1.classList.remove('active');
-                    elC4img3.classList.remove('active');
-                }
-            }, 500);
-            setTimeout(() => {
-                if(4100 <= window.scrollY){
                     elC4img2.classList.add('active');
+                    elC4img3.classList.add('active');
                     elC4img4.classList.add('active');
-                }else{
-                    elC4img2.classList.remove('active');
-                    elC4img4.classList.remove('active');
-                }
-            }, 1000);
-            setTimeout(() => {
-                if(4400 <= window.scrollY){
                     elC4img5.classList.add('active');
-                }else{
-                    elC4img5.classList.remove('active');
-                }
-            }, 2000);
-            setTimeout(() => {
-                if(4400 <= window.scrollY){
                     elC4img6.classList.add('active');
-                }else{
-                    elC4img6.classList.remove('active');
-                }
-            }, 3000);
-            setTimeout(() => {
-                if(4400 <= window.scrollY){
                     elC4img7.classList.add('active');
-                }else{
-                    elC4img7.classList.remove('active');
-                }
-            }, 3500);
-
-            setTimeout(() => {
-                if(4400 <= window.scrollY){
                     elC4img8.classList.add('active');
-                }else{
-                    elC4img8.classList.remove('active');
-                }
-            }, 3500);
-            
-            setTimeout(() => {
-                if(4400 <= window.scrollY){
                     elC4img9.classList.add('active');
-                }else{
-                    elC4img9.classList.remove('active');
-                }
-            }, 4000);
-
-            setTimeout(() => {
-                if(4430 <= window.scrollY){
                     elC4img10.classList.add('active');
-                }else{
-                    elC4img10.classList.remove('active');
-                }
-            }, 4500);
-
-            setTimeout(() => {
-                if(4400 <= window.scrollY){
                     elC4img11.classList.add('active');
-                }else{
-                    elC4img11.classList.remove('active');
-                }
-            }, 5000);
-
-            setTimeout(() => {
-                if(4400 <= window.scrollY){
                     elC4img12.classList.add('active');
                 }else{
+                    elC4img1.classList.remove('active');
+                    elC4img2.classList.remove('active');
+                    elC4img3.classList.remove('active');
+                    elC4img4.classList.remove('active');
+                    elC4img5.classList.remove('active');
+                    elC4img6.classList.remove('active');
+                    elC4img7.classList.remove('active');
+                    elC4img8.classList.remove('active');
+                    elC4img9.classList.remove('active');
+                    elC4img10.classList.remove('active');
+                    elC4img11.classList.remove('active');
                     elC4img12.classList.remove('active');
                 }
-            }, 5500);
-           
         })
         
         //------------con5--------------------------------------------
