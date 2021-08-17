@@ -9,7 +9,6 @@
     const elScon4 = document.querySelector('.con4');
     const elPort1 = document.querySelector('.port');
 
-
     window.addEventListener('scroll',function(){
 
         let winHei = window.innerHeight;
@@ -21,8 +20,8 @@
         let elCon3Height2 = elScon3.offsetTop + 700;
         let elCon4Height = elScon4.offsetTop + 400;
         let elPortHei = elPort1.offsetTop;
-       
-            if(elMain1-winHei <= window.scrollY && window.scrollY <= elMain2){
+        console.log(window.scrollY);
+            if(0 <= window.scrollY && window.scrollY <= elMain2){
                 elA[3].classList.add('active');
             }else{
                 elA[3].classList.remove('active');
@@ -586,7 +585,7 @@
 
         
 
-        console.log(pos.state)
+
         
 
     })

@@ -19,10 +19,6 @@ a, ul, li {
   margin: 0;
 }
 
-img {
-  width: 100%;
-}
-
 figure {
   margin: 0;
 }
@@ -61,6 +57,7 @@ main header .logo a {
   font-weight: 600;
   display: block;
   margin-top: 0%;
+  color: #000;
 }
 
 main header.active {
@@ -227,6 +224,25 @@ main header .buger .nav li:nth-of-type(3) {
 main header .buger .nav li:nth-of-type(4) {
   -webkit-transition: 1.2s;
   transition: 1.2s;
+}
+
+main header .buger .nav li:nth-of-type(4) a {
+  color: #ffdf60;
+}
+
+main header .buger .nav li:nth-of-type(4) a:before {
+  content: '';
+  background-color: #ffdf60;
+  height: 8px;
+  width: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: absolute;
+  bottom: 0px;
+}
+
+main header .buger .nav li:nth-of-type(4) a:hover:before {
+  width: 100%;
 }
 
 main header .buger .nav li:nth-of-type(5) {
@@ -1129,7 +1145,7 @@ main .con4 .btn a {
 }
 
 .port article .port_list_1 .cate1 ul li:nth-of-type(2) {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 500;
 }
 
@@ -1621,7 +1637,7 @@ main .con4 .btn a {
 }
 
 .footer {
-  margin-top: 50px;
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -1739,8 +1755,8 @@ main .con4 .btn a {
 
 .footer .inner-1 .news-letter li:nth-of-type(4) .check {
   font-size: 1.5rem;
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
+  -webkit-transform: translateX(51px);
+          transform: translateX(51px);
   cursor: pointer;
 }
 
@@ -1750,8 +1766,9 @@ main .con4 .btn a {
   font-weight: 500;
   top: 0;
   right: 0;
-  font-size: 1.3rem;
-  width: 74%;
+  font-size: 1.5rem;
+  -webkit-transform: translate(-185px, -2px);
+          transform: translate(-185px, -2px);
   display: none;
 }
 

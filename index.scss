@@ -26,6 +26,7 @@ main{
                 font-weight:600;
                 display: block;
                 margin-top:0%;
+                color:#000;
             }
         }
         &.active{
@@ -149,6 +150,17 @@ main{
                 }
                 li:nth-of-type(4){
                     transition: 1.2s;
+                    a{color:#ffdf60;}
+                    a:before{
+                        content : '';
+                        background-color: #ffdf60;
+                        height: 8px;
+                        width : 0;  
+                        transition: 0.4s;    
+                        position: absolute;
+                        bottom:0px;
+                    }
+                    a:hover:before{width : 100%;}
                 }
                 li:nth-of-type(5){
                     transition: 1.4s;
@@ -682,7 +694,7 @@ main{
                             margin:15px 0 15px 0;
                         }
                         li:nth-of-type(2){
-                            font-size: 2.5rem;
+                            font-size: 2.3rem;
                             font-weight: 500;
                         }
                     }
@@ -857,7 +869,7 @@ main{
         }
     }
     .footer{
-        margin-top: 50px;
+        margin-top: 60px;
         text-align: center;
         .inner-1{
             color:#fff;
@@ -897,7 +909,6 @@ main{
             }
             .news-letter{
                 width:50%;
-                li{}
                 li:nth-of-type(1){
                     font-size: 1.5rem;
                     font-weight: 600;
@@ -942,7 +953,7 @@ main{
                     font-weight: 300;
                     .check{
                         font-size: 1.5rem;
-                        transform: translateX(50px);
+                        transform: translateX(51px);
                         cursor: pointer;
                     }
                     .checked{
@@ -950,8 +961,8 @@ main{
                         position: absolute;
                         font-weight: 500;
                         top:0; right:0;
-                        font-size: 1.3rem;
-                        width: 74%;
+                        font-size: 1.5rem;
+                        transform: translate(-185px, -2px);
                         display: none;
                         &.active{display: block;}
                     }
@@ -994,9 +1005,6 @@ main{
 
             .right-text{
                 margin-right: 5%;
-                li{
-                    span{}
-                }
                 li:nth-of-type(1){
                     @include inner-2_li_fontStyle;
                     margin:40px 0 10px 0;
@@ -1015,8 +1023,6 @@ main{
                         // margin-bottom: 10px;
                         font-weight: 800;
                         font-size: 1.2rem;
-                    }
-                    span:nth-of-type(2){
                     }
                 }
             }
