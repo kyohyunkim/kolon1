@@ -2030,19 +2030,6 @@ main .con3 .box-2 .bg .left {
   width: 40%;
 }
 
-main .con3 .box-2 .bg .left .dashed {
-  background-image: url("about_img/dashed.png");
-  background-repeat: no-repeat;
-  width: 30%;
-  height: 50px;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-60%, 295px);
-          transform: translate(-60%, 295px);
-  position: absolute;
-  display: none;
-}
-
 main .con3 .box-2 .bg .left .dashed2 {
   background-image: url("about_img/dashed2.png");
   background-repeat: no-repeat;

@@ -12,7 +12,6 @@
     window.addEventListener('scroll',function(){
 
         let winHei = window.innerHeight;
-        let elMain1 = elSide.offsetTop;
         let elMain2 = elSide.offsetTop + 800;
         let elCon2Height = elScon2.offsetTop + 400;
         let elCon2Height2 = elScon2.offsetTop + 700;
@@ -52,22 +51,18 @@
 
     console.log(elA);
 
-    let elCon4Height = elScon4.offsetTop - 200;
-    let elCon3Height = elScon3.offsetTop - 200;
-    let elCon2Height = elScon2.offsetTop - 200;
-
     function load(k){
         window.scrollTo({top:k, behavior:'smooth'});
     };
 
     elA[0].addEventListener('click',function(){
-        load(elCon4Height);
+        load(3704);
     })
     elA[1].addEventListener('click',function(){
-        load(elCon3Height);
+        load(2467);
     })
     elA[2].addEventListener('click',function(){
-        load(elCon2Height);
+        load(1230);
     })
     elA[3].addEventListener('click',function(){
         load(0);
@@ -156,22 +151,27 @@
         for(let i=0; i<elCon1text3.length; i++){
             elCon1text3[i].classList.add('active');
         }
+        if(0 >= this.window.scrollY){
             elPerson.classList.add('active');
             elLine.classList.add('active');
             elDivtext.classList.add('active');
-            elSide1.classList.add('active1');
-            elA[3].classList.add('active');
-        
+            
+        }
     }, 800);
+    setTimeout(() => {
+        elSide1.classList.add('active1');
+        elA[3].classList.add('active');
+    }, 800);
+    
+
 
     // 사람/배경/글씨-ani//
     window.addEventListener("scroll",function(){
 
-        let domHei = document.documentElement.offsetHeight;
         let winHei = window.innerHeight;
         let elBtnHei = elBtnline.offsetTop;
 
-        if(winHei/4 >= window.scrollY){
+        if(0 >= this.window.scrollY && 517 >= this.window.scrollY){
             elPerson.classList.add('active');
             elLine.classList.add('active');
             elDivtext.classList.add('active');
@@ -179,7 +179,8 @@
             elPerson.classList.remove('active');
             elLine.classList.remove('active');
             elDivtext.classList.remove('active');
-        };
+        }
+        
 
         // 자세히보기btn-ani//
         setTimeout(() => {

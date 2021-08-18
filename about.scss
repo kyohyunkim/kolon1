@@ -566,19 +566,7 @@ main{
                     margin:0 auto 0 35%;
                     color:#fff;
                     width:40%;
-                    .dashed{
-                        background-image: url('about_img/dashed.png');
-                        background-repeat: no-repeat;
-                        width:30%;
-                        height: 50px;
-                        top: 0; left:50%;
-                        transform: translate(-60%,295px);
-                        position: absolute;
-                        display: none;
-                        &.active{
-                            // display: block;
-                        }
-                    }
+                    
                     .dashed2{
                         background-image: url('about_img/dashed2.png');
                         background-repeat: no-repeat;
