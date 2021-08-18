@@ -572,7 +572,7 @@ main{
                         width:30%;
                         height: 50px;
                         top: 0; left:50%;
-                        transform: translate(-49%,295px);
+                        transform: translate(-60%,295px);
                         position: absolute;
                         display: none;
                         &.active{
@@ -584,7 +584,7 @@ main{
                         background-repeat: no-repeat;
                         width:10px; height: 0%;
                         top:0; left:0;
-                        margin:17% 0 0 51.3%;
+                        margin:15.5% 0 0 51.3%;
                         position:absolute;
                         &.active{
                             animation: dashed1 4s;
@@ -615,17 +615,7 @@ main{
                         from{width:120px;}
                         to{}
                     }
-                    .line2{
-                        border-bottom:1.8px solid#fff;
-                        width: 0;
-                        position: absolute;
-                        top:0; left:0;
-                        // margin:11.5% 0 0 53.9%;
-                        transition: 2s;
-                        &.active{
-                            width:134px;
-                        }
-                    }
+                    
                     .left_con1{
                         display: flex;
                         justify-content: space-between;
@@ -710,7 +700,7 @@ main{
                                     opacity: 0;
                                     position: absolute;
                                     top:0; left:0;
-                                    transform: translate(-30%,222px);
+                                    transform: translate(-32.5%,222px);
                                     &.active{
                                         animation: i-8 1s;
                                         animation-delay: 2s;
@@ -723,9 +713,9 @@ main{
                                     position: absolute;
                                     top:0; left:0;
                                     transition: 2s;
-                                    margin: 65% 0 0 -33%;
+                                    margin: 65% 0 0 -47%;
                                     &.active{
-                                        width:112px;
+                                        width:143px;
                                     }
                                 }
                                 .line2{
@@ -736,7 +726,7 @@ main{
                                     margin: 65% 0 0 81.5%;
                                     transition: 2s;
                                     &.active{
-                                        width:85px;
+                                        width:115px;
                                     }
                                 }
                             }
@@ -870,7 +860,7 @@ main{
                     color:#fff;
                     margin:auto;
                     div{
-                        margin-right: 240px;
+                        margin-right: 274px;
                         text-align: center;
                         font-weight: 300;
                         font-size: 1.1rem;
@@ -1346,7 +1336,7 @@ main{
                     font-weight: 300;
                     .check{
                         font-size: 1.5rem;
-                        transform: translateX(26px);
+                        transform: translateX(51px);
                         cursor: pointer;
                     }
                     .checked{

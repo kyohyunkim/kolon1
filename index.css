@@ -1755,8 +1755,8 @@ main .con4 .btn a {
 
 .footer .inner-1 .news-letter li:nth-of-type(4) .check {
   font-size: 1.5rem;
-  -webkit-transform: translateX(26px);
-          transform: translateX(26px);
+  -webkit-transform: translateX(51px);
+          transform: translateX(51px);
   cursor: pointer;
 }
 

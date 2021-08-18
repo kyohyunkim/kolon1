@@ -2037,8 +2037,8 @@ main .con3 .box-2 .bg .left .dashed {
   height: 50px;
   top: 0;
   left: 50%;
-  -webkit-transform: translate(-49%, 295px);
-          transform: translate(-49%, 295px);
+  -webkit-transform: translate(-60%, 295px);
+          transform: translate(-60%, 295px);
   position: absolute;
   display: none;
 }
@@ -2050,7 +2050,7 @@ main .con3 .box-2 .bg .left .dashed2 {
   height: 0%;
   top: 0;
   left: 0;
-  margin: 17% 0 0 51.3%;
+  margin: 15.5% 0 0 51.3%;
   position: absolute;
 }
 
@@ -2116,20 +2116,6 @@ main .con3 .box-2 .bg .left .dashed3.active {
   }
   to {
   }
-}
-
-main .con3 .box-2 .bg .left .line2 {
-  border-bottom: 1.8px solid #fff;
-  width: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: 2s;
-  transition: 2s;
-}
-
-main .con3 .box-2 .bg .left .line2.active {
-  width: 134px;
 }
 
 main .con3 .box-2 .bg .left .left_con1 {
@@ -2266,8 +2252,8 @@ main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .dashed1 {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform: translate(-30%, 222px);
-          transform: translate(-30%, 222px);
+  -webkit-transform: translate(-32.5%, 222px);
+          transform: translate(-32.5%, 222px);
 }
 
 main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .dashed1.active {
@@ -2287,11 +2273,11 @@ main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line1 {
   left: 0;
   -webkit-transition: 2s;
   transition: 2s;
-  margin: 65% 0 0 -33%;
+  margin: 65% 0 0 -47%;
 }
 
 main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line1.active {
-  width: 112px;
+  width: 143px;
 }
 
 main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line2 {
@@ -2306,7 +2292,7 @@ main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line2 {
 }
 
 main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line2.active {
-  width: 85px;
+  width: 115px;
 }
 
 main .con3 .box-2 .bg .left .left_con1 .u-2 .st-1 {
@@ -2515,7 +2501,7 @@ main .con3 .box-2 .bg .right {
 }
 
 main .con3 .box-2 .bg .right div {
-  margin-right: 240px;
+  margin-right: 274px;
   text-align: center;
   font-weight: 300;
   font-size: 1.1rem;
@@ -3297,8 +3283,8 @@ main .con5 ul div li img {
 
 .footer .inner-1 .news-letter li:nth-of-type(4) .check {
   font-size: 1.5rem;
-  -webkit-transform: translateX(26px);
-          transform: translateX(26px);
+  -webkit-transform: translateX(51px);
+          transform: translateX(51px);
   cursor: pointer;
 }
 
