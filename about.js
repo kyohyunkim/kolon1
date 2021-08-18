@@ -105,7 +105,7 @@
                   }
             }
 
-            setTimeout(() => {
+        
                 for(let i=0; i<elBig.length; i++){
                     if(400 <= window.scrollY){
                         elBig[i].classList.add('active');
@@ -120,7 +120,7 @@
                     elCimg1.classList.remove('active');
                     // elCimg2.classList.remove('active');
                 }
-            }, 1000);
+    
             
             
       
@@ -153,13 +153,13 @@
         const elRight2 = document.querySelector('.right div .r-2');
         const elRight3 = document.querySelector('.right div .r-3');
 
-        const elDashed0 = document.querySelector('.dashed');
+        const elDashed0 = document.querySelector('.dashed1');
         const elDashed1 = document.querySelector('.dashed2');
         const elDashed2 = document.querySelector('.dashed3');
 
         window.addEventListener('scroll',function(){
 
-            setTimeout(() => {
+        
                 for(let i=0; i<elCbig.length; i++){
                     if(1400 <= window.scrollY){
                         elCbig[i].classList.add('active');
@@ -167,23 +167,23 @@
                         elCbig[i].classList.remove('active');
                     }
                 }
-            }, 1000);
+         
 
-            setTimeout(() => {
+        
                     if(1844 <= window.scrollY){
                         elCone.classList.add('active');
                     }else{
                         elCone.classList.remove('active');
                     }
-            }, 1000);
+        
             
-            setTimeout(() => {
+  
                 if(1844 <= window.scrollY){
                 elC3box.classList.add('active');
                 }else{
                     elC3box.classList.remove('active');
                 }
-            }, 500);
+         
             
 
           
@@ -291,15 +291,7 @@
         const elC4img12 = document.querySelector('.con4 .bg-img .i-12');
 
         window.addEventListener('scroll',function(){
-            let winHei = window.innerHeight;
-            let elCon4Top = elCon4.offsetTop;
 
-            console.log(elCon4Top);
-            console.log(winHei);
-            console.log(elCon4Top-winHei);
-            console.log(window.scrollY)
-            
-            setTimeout(() => {
                 for(let i=0; i<elC4big.length; i++){
                     if(4100 <= window.scrollY){
                         elC4big[i].classList.add('active');
@@ -307,18 +299,15 @@
                         elC4big[i].classList.remove('active');
                     }
                 }
-                
-            }, 1000);
-
-            setTimeout(() => {
+          
                 for(let i=0; i<elC4botT.length; i++){
-                    if(4400 <= window.scrollY){
+                    if(4100 <= window.scrollY){
                         elC4botT[i].classList.add('active');
                     }else{
                         elC4botT[i].classList.remove('active');
                     }
                 }
-            }, 1000);
+ 
             
                 if(4100 <= window.scrollY){
                     elC4img1.classList.add('active');
@@ -353,6 +342,7 @@
         const elCimg = document.querySelectorAll('.con5 ul div li');
         const elH5 = document.querySelector('.con5 h5 div');
         const elH3 = document.querySelectorAll('.con5 h3 div p');
+        const elPlus = document.querySelector('.con5 .plus');
         const elLineimg1 = document.querySelector('.con5 .move1');
         const elLineimg2 = document.querySelector('.con5 .move2');
         const elLineimg3 = document.querySelector('.con5 .move3');
@@ -381,7 +371,7 @@
                   }
             }
 
-            setTimeout(() => {
+     
                 for(let i=0; i<elCimg.length; i++){
                     if(5000 <= window.scrollY){
                         elCimg[i].classList.add('active');
@@ -389,11 +379,18 @@
                         elCimg[i].classList.remove('active');
                     }
                 }
-            }, 500);
+                
+                if(5000 <= window.scrollY){
+                    elH5.classList.add('active');
+                    elPlus.classList.add('active');
+                }else{
+                    elH5.classList.remove('active');
+                    elPlus.classList.remove('active');
+                }
 
             //-------h3-----------------
 
-            setTimeout(() => {
+     
                 for(let i=0; i<elH3.length; i++){
                     if(5000 <= window.scrollY){
                         elH3[i].classList.add('active');
@@ -401,7 +398,7 @@
                         elH3[i].classList.remove('active');
                     }
                 }
-            }, 500);
+     
 
             
 

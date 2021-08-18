@@ -32,6 +32,7 @@ main{
             padding-top: 50px;
             transform: translateY(-30px);
         }
+        
 
         // ------------------------------------------------------------------
         .buger{
@@ -205,16 +206,19 @@ main{
                 position: relative;
                 z-index: 9999;
                 div{
-                    transition: .7s;
-                    transform: translateY(20px);
                     opacity: 0;
                     &.active{
-                        transform: translateY(0);
-                        opacity: 1;
+                        animation: con1div 1s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards; 
                     }
                     a{
                         color:#999;
                     }
+                }
+                @keyframes con1div{
+                    from{transform: translateY(20px);opacity: 0;}
+                    to{transform: translateY(0);opacity: 1;}
                 }
                 }
                 .bigText{
@@ -316,13 +320,16 @@ main{
                     div{
                         overflow: hidden;
                         li{
-                            transform: translateY(40px);
-                            transition: 0.7s;
                             opacity: 0;
                             &.active{
-                                transform: translateY(0);
-                                opacity: 1;
+                                animation: con2div 1s;
+                                animation-delay: .5s;
+                                animation-fill-mode: forwards; 
                             }
+                        }
+                        @keyframes con2div{
+                            from{transform: translateY(50px);opacity: 0;}
+                            to{transform: translateY(0);opacity: 1;}
                         }
                     }
                 }
@@ -462,7 +469,9 @@ main{
                     transition: 0.7s;
                     z-index: 99;
                     &.active{
-                        opacity: 1;
+                        animation: i-8 1s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards; 
                     }
                 }
             }
@@ -488,12 +497,11 @@ main{
                 div{
                     overflow: hidden;
                     li{
-                    transition: .7s;
                     opacity: 0;
-                    transform: translateY(40px);
                     &.active{
-                        opacity: 1;
-                        transform: translateY(0);
+                        animation: con2div 1s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards; 
                     }
                     }
                 }
@@ -559,12 +567,16 @@ main{
                     color:#fff;
                     width:40%;
                     .dashed{
+                        background-image: url('about_img/dashed.png');
+                        background-repeat: no-repeat;
+                        width:30%;
+                        height: 50px;
                         top: 0; left:50%;
                         transform: translate(-49%,295px);
                         position: absolute;
                         display: none;
                         &.active{
-                            display: block;
+                            // display: block;
                         }
                     }
                     .dashed2{
@@ -572,7 +584,7 @@ main{
                         background-repeat: no-repeat;
                         width:10px; height: 0%;
                         top:0; left:0;
-                        margin:15.5% 0 0 50%;
+                        margin:17% 0 0 51.3%;
                         position:absolute;
                         &.active{
                             animation: dashed1 4s;
@@ -590,7 +602,7 @@ main{
                         width:10px; height: 0%;
                         position:absolute;
                         top:0; left:0;
-                        margin:12% 0 0 72.7%;
+                        margin:13% 0 0 71.8%;
                         position:absolute;
                         &.active{
                             animation: dashed1 4s;
@@ -598,23 +610,17 @@ main{
                             animation-fill-mode: forwards;
                         }
                     }
-                    .line1{
-                        border-bottom:1.8px solid#fff;
-                        width: 0;
-                        position: absolute;
-                        top:0; left:0;
-                        margin:11.5% 0 0 39.7%;
-                        transition: 2s;
-                        &.active{
-                            width:120px;
-                        }
+                    
+                    @keyframes line{
+                        from{width:120px;}
+                        to{}
                     }
                     .line2{
                         border-bottom:1.8px solid#fff;
                         width: 0;
                         position: absolute;
                         top:0; left:0;
-                        margin:11.5% 0 0 53.9%;
+                        // margin:11.5% 0 0 53.9%;
                         transition: 2s;
                         &.active{
                             width:134px;
@@ -631,6 +637,7 @@ main{
                         
                         
                         .u-1{
+                            
                             text-align: center;
                             .st-2{
                                 svg{
@@ -687,15 +694,49 @@ main{
                         }
                         .u-2{
                             text-align: center;
-                            transform: translateX(-10%);  
+                            transform: translateX(0%);  
                             .st-2{
                                 svg{
                                     position: absolute;
                                     margin:40px 0 0 16%;
+                                    text-align: center;
                                     transform: rotateZ(-90deg);
                                     display: none;
                                     &.active{
                                         display: block;
+                                    }
+                                }
+                                .dashed1{
+                                    opacity: 0;
+                                    position: absolute;
+                                    top:0; left:0;
+                                    transform: translate(-30%,222px);
+                                    &.active{
+                                        animation: i-8 1s;
+                                        animation-delay: 2s;
+                                        animation-fill-mode: forwards;
+                                    }
+                                }
+                                .line1{
+                                    border-bottom:1.8px solid#fff;
+                                    width: 0;
+                                    position: absolute;
+                                    top:0; left:0;
+                                    transition: 2s;
+                                    margin: 65% 0 0 -33%;
+                                    &.active{
+                                        width:112px;
+                                    }
+                                }
+                                .line2{
+                                    border-bottom:1.8px solid#fff;
+                                    width: 0;
+                                    position: absolute;
+                                    top:0; left:0;
+                                    margin: 65% 0 0 81.5%;
+                                    transition: 2s;
+                                    &.active{
+                                        width:85px;
                                     }
                                 }
                             }
@@ -727,7 +768,7 @@ main{
                             .st-2{
                                 svg{
                                     position: absolute;
-                                    margin:40px 0 0 -4%;
+                                    margin:40px 0 0 -25px;
                                     transform: rotateZ(-90deg);
                                     display: none;
                                     &.active{
@@ -759,13 +800,14 @@ main{
                     
                     }
                     .left_con2{
-                        width:100%;
+                        transform: translateX(20px);
+                        width:90%;
                         margin:52px auto 30px auto;
                         text-align: center;
                         font-weight: 700;
                         font-size: 1.7rem;
                         background-color: #fff;
-                        padding:2.5px;
+                        padding:2px;
                         border-radius: 60px;
                         opacity: .5;
                         &.active{
@@ -795,12 +837,14 @@ main{
                         }
                     }
                     .left_con3{
-                        margin:0px auto;
+                        width:90%;
+                        transform: translate(20px,10px);
+                        margin:0 auto;
                         text-align: center;
                         font-weight: 700;
                         font-size: 1.7rem;
                         background-color: #fff;
-                        padding:2.5px;
+                        padding:2px;
                         border-radius: 60px;
                         opacity: .5;
                         &.active{
@@ -831,7 +875,6 @@ main{
                         font-weight: 300;
                         font-size: 1.1rem;
                         // background-color: #7da8d5;
-                        padding:10px;
                         overflow: hidden;
                         .r-1{
                             background-color: #7da8d5;
@@ -850,6 +893,8 @@ main{
                         .r-2{
                             background-color: #7da8d5;
                             opacity: 0;
+                            width:30px;
+                            margin:0 auto;
                             &.active{
                                 animation: r-1 1s;
                                 animation-delay: 2.4s;
@@ -859,6 +904,7 @@ main{
                         .r-3{
                             background-color: #7da8d5;
                             opacity: 0;
+                            margin:0 auto;
                             &.active{
                                 animation: r-1 1s;
                                 animation-delay: 2.8s;
@@ -906,13 +952,16 @@ main{
                         line-height: 70px;
                         overflow: hidden;
                         li{
-                            transform: translateY(40px);
-                            transition: .7s;
                             opacity: 0;
                             &.active{
-                                opacity: 1;
-                                transform: translateY(0);
+                                animation: con4li 1s;
+                                animation-delay: .5s;
+                                animation-fill-mode: forwards;
                             }
+                        }
+                        @keyframes con4li {
+                            from{transform: translateY(40px);opacity: 0;}
+                            to{transform: translateY(0);opacity: 1;}
                         }
                     }
                 }
@@ -931,8 +980,6 @@ main{
                         }
                         li:nth-of-type(odd){
                             font-weight: 600;
-                            // display: block;
-                            
                         }
                         li:nth-of-type(even){
                             font-size: 1.7rem;
@@ -942,13 +989,11 @@ main{
                         li:nth-of-type(even) b{
                             font-size: 3rem;
                             font-weight: 600;
-                            transform: translateY(40px);
-                            transition: .7s;
                             opacity: 0;
-                            display: block;
                             &.active{
-                                opacity: 1;
-                                transform: translateY(10px);
+                                animation: con4li 1s;
+                                animation-delay: 1s;
+                                animation-fill-mode: forwards;
                             }
                         }
                     }
@@ -988,8 +1033,9 @@ main{
                 }
                 .i-3{
                     opacity: .3;
+                    transform: translateY(-15px);
                     &.active{
-                        animation: i-24 1s;
+                        animation: i-8 1s;
                         animation-delay: 1s;
                         animation-fill-mode: forwards;
                     }
@@ -1101,15 +1147,18 @@ main{
             transform: translateX(50%);
             div{
                 overflow: hidden;
-                p{
-                    opacity: 0;
-                    transform: translateY(50px);
-                    transition: 1s;
-                    &.active{
-                        opacity: 1;
-                        transform: translateY(0);
+                    p{
+                        opacity: 0;
+                        &.active{
+                            animation:con5div 1s;
+                            animation-delay: 1s;
+                            animation-fill-mode: forwards;
+                        }
                     }
                 }
+                @keyframes con5div {
+                    from{transform: translateY(50px);opacity: 0;}
+                    to{transform: translateY(0);opacity: 1;}
             }
             div:nth-of-type(2){
                 margin-top: -50px;
@@ -1124,12 +1173,27 @@ main{
             font-weight: 800;
             width:50%;
             transform: translate(60%, -86%);
+            div{
+            opacity: .1;
+                &.active{
+                    animation:i-8 1s;
+                    animation-delay: 1s;
+                    animation-fill-mode: forwards;
+                }   
+            }
+            
         }
         .plus{
             position: absolute;
             z-index: 2;
             top:0; left:0;
             margin: 15% 0 0 60%;
+            opacity: .1;
+            &.active{
+                animation:i-8 1s;
+                animation-delay: 1s;
+                animation-fill-mode: forwards;
+            }
             img{width:auto;}
         }
         
@@ -1154,11 +1218,11 @@ main{
                 overflow: hidden;
                 scroll-behavior: smooth;
                 li{
-                    transform: translateY(50px);
                     opacity: 0;
                     &.active{
-                        opacity: 1;
-                        transform: translateY(0);
+                        animation:con5div 1s;
+                        animation-delay: 1s;
+                        animation-fill-mode: forwards;
                     }
                     img{
                         z-index: -1;
@@ -1282,7 +1346,7 @@ main{
                     font-weight: 300;
                     .check{
                         font-size: 1.5rem;
-                        transform: translateX(51px);
+                        transform: translateX(26px);
                         cursor: pointer;
                     }
                     .checked{
