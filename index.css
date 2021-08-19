@@ -319,14 +319,15 @@ main .side_menu div .nav {
   -webkit-transition: .5s;
   transition: .5s;
   opacity: 0;
-  -webkit-transform: translateY(40px);
-          transform: translateY(40px);
 }
 
 main .side_menu div .nav.active1 {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: side 1s;
+          animation: side 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .side_menu div .nav.active {
@@ -354,6 +355,32 @@ main .side_menu div .nav li a.active {
 
 main .side_menu div .nav li:nth-of-type(1) {
   font-weight: 500;
+}
+
+@-webkit-keyframes side {
+  from {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes side {
+  from {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 main .fixed-img {
@@ -389,16 +416,17 @@ main .fixed-img .bg-img1 {
 
 main .fixed-img .bg-img1 .person-img {
   margin-top: -5%;
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
 }
 
 main .fixed-img .bg-img1 .person-img.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 
@@ -413,7 +441,10 @@ main .fixed-img .bg-img1 .line-img {
 }
 
 main .fixed-img .bg-img1 .line-img.active {
-  opacity: 1;
+  -webkit-animation: line-bg 1s;
+          animation: line-bg 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .fixed-img .bg-img1 div {
@@ -423,19 +454,84 @@ main .fixed-img .bg-img1 div {
   top: 0;
   left: 0;
   padding: 40% 0 0 87%;
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
   opacity: 0;
   -webkit-transition: 1.2s;
   transition: 1.2s;
-  color: #fff;
 }
 
 main .fixed-img .bg-img1 div.active {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  color: #000;
-  opacity: 1;
+  -webkit-animation: textdiv 1s;
+          animation: textdiv 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes person {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+  }
+}
+
+@keyframes person {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+  }
+}
+
+@-webkit-keyframes line-bg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes line-bg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes textdiv {
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+    color: #fff;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    color: #000;
+  }
+}
+
+@keyframes textdiv {
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+    color: #fff;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+    color: #000;
+  }
 }
 
 main .fixed-img .bg-img2 .person-img {
@@ -591,17 +687,14 @@ main .con1 .bigText-1 ul div li {
   font-weight: 550;
   word-spacing: 4px;
   margin-top: -5px;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: .6s;
-  transition: .6s;
 }
 
 main .con1 .bigText-1 ul div li.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: con-text 1s;
+          animation: con-text 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .con1 .bigText-2 {
@@ -617,17 +710,14 @@ main .con1 .bigText-2 ul div li {
   font-weight: 600;
   word-spacing: 4px;
   margin-top: -30px;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
   opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
 }
 
 main .con1 .bigText-2 ul div li.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: con-text2 1s;
+          animation: con-text2 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .con1 .smallText-1 {
@@ -638,17 +728,14 @@ main .con1 .smallText-1 ul li {
   font-size: 1.5em;
   word-spacing: 4px;
   margin-top: 30px;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
 }
 
 main .con1 .smallText-1 ul li.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: con-text 1.5s;
+          animation: con-text 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .con1 .btn {
@@ -711,17 +798,16 @@ main .con2 .bigText-2 ul div li {
   font-weight: 600;
   word-spacing: 4px;
   margin-top: -30px;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: .8s;
-  transition: .8s;
 }
 
 main .con2 .bigText-2 ul div li.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: con-text2 1s;
+          animation: con-text2 1s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .con2 .smallText-1 {
@@ -732,17 +818,16 @@ main .con2 .smallText-1 ul li {
   font-size: 1.5em;
   word-spacing: 4px;
   margin-top: 30px;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
 }
 
 main .con2 .smallText-1 ul li.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: con-text 1.5s;
+          animation: con-text 1.5s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .con2 .btn {
@@ -805,17 +890,16 @@ main .con3 .bigText-2 ul div li {
   font-weight: 600;
   word-spacing: 4px;
   margin-top: -30px;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: .8s;
-  transition: .8s;
 }
 
 main .con3 .bigText-2 ul div li.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: con-text2 1s;
+          animation: con-text2 1s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .con3 .smallText-1 {
@@ -826,17 +910,16 @@ main .con3 .smallText-1 ul li {
   font-size: 1.5em;
   word-spacing: 4px;
   margin-top: 30px;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
 }
 
 main .con3 .smallText-1 ul li.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: con-text2 1.5s;
+          animation: con-text2 1.5s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .con3 .btn {
@@ -899,17 +982,16 @@ main .con4 .bigText-2 ul div li {
   font-weight: 600;
   word-spacing: 4px;
   margin-top: -30px;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: .8s;
-  transition: .8s;
 }
 
 main .con4 .bigText-2 ul div li.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: con-text2 1s;
+          animation: con-text2 1s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .con4 .smallText-1 {
@@ -920,17 +1002,16 @@ main .con4 .smallText-1 ul li {
   font-size: 1.5em;
   word-spacing: 4px;
   margin-top: 30px;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   opacity: 0;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
 }
 
 main .con4 .smallText-1 ul li.active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
+  -webkit-animation: con-text 1.5s;
+          animation: con-text 1.5s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 main .con4 .btn {
@@ -973,6 +1054,58 @@ main .con4 .btn a {
   text-decoration: none;
   color: #000;
   position: relative;
+}
+
+@-webkit-keyframes con-text {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes con-text {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes con-text2 {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes con-text2 {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .port {
@@ -1753,26 +1886,30 @@ main .con4 .btn a {
   font-weight: 300;
 }
 
-.footer .inner-1 .news-letter li:nth-of-type(4) .check {
-  font-size: 1.5rem;
-  -webkit-transform: translateX(51px);
-          transform: translateX(51px);
-  cursor: pointer;
+.footer .inner-1 .news-letter li:nth-of-type(4) .checkbox {
+  position: absolute;
+  margin: 0 0 35px 63%;
 }
 
-.footer .inner-1 .news-letter li:nth-of-type(4) .checked {
+.footer .inner-1 .news-letter li:nth-of-type(4) .checkbox .check {
+  font-size: 1.5rem;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.footer .inner-1 .news-letter li:nth-of-type(4) .checkbox .checked {
   cursor: pointer;
   position: absolute;
   font-weight: 500;
-  top: 0;
+  top: -5px;
   right: 0;
   font-size: 1.5rem;
-  -webkit-transform: translate(-185px, -2px);
-          transform: translate(-185px, -2px);
   display: none;
 }
 
-.footer .inner-1 .news-letter li:nth-of-type(4) .checked.active {
+.footer .inner-1 .news-letter li:nth-of-type(4) .checkbox .checked.active {
   display: block;
 }
 

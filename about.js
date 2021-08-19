@@ -155,7 +155,7 @@
 
         const elDashed0 = document.querySelector('.dashed1');
         const elDashed1 = document.querySelector('.dashed2');
-        const elDashed2 = document.querySelector('.dashed3');
+        const elDashed2 = document.querySelector('.right .dashed3 li');
 
         window.addEventListener('scroll',function(){
 
@@ -238,9 +238,7 @@
                     elUs1.classList.add('active');
                     elUto1.classList.add('active');
                     elUto3.classList.add('active');
-                    elSvg1.classList.add('active');
-                    elSvg2.classList.add('active');
-                    elSvg3.classList.add('active');
+                    
                     elWline1.classList.add('active');
                     elWline2.classList.add('active');
 
@@ -255,9 +253,7 @@
                     elUs1.classList.remove('active');
                     elUto1.classList.remove('active');
                     elUto3.classList.remove('active');
-                    elSvg1.classList.remove('active');
-                    elSvg2.classList.remove('active');
-                    elSvg3.classList.remove('active');
+                    
                     elWline1.classList.remove('active');
                     elWline2.classList.remove('active');
 
@@ -269,6 +265,18 @@
                     elUto2.classList.remove('active');
                     elUto4.classList.remove('active');
                 }
+
+                setTimeout(() => {
+                    if(1844 <= window.scrollY){
+                        elSvg1.classList.add('active');
+                        elSvg2.classList.add('active');
+                        elSvg3.classList.add('active');
+                    }else{
+                        elSvg1.classList.remove('active');
+                        elSvg2.classList.remove('active');
+                        elSvg3.classList.remove('active');
+                    }
+                }, 1000);
         })
         
 

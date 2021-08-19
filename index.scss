@@ -220,10 +220,10 @@ main{
             opacity: 1;
             transition: .5s;
             opacity: 0;
-            transform: translateY(40px);
             &.active1{
-                transform: translateY(0);
-                opacity: 1;
+                animation: side 1s;
+                animation-delay: 1s;
+                animation-fill-mode: forwards;
             }
             &.active{
                 opacity: 0;
@@ -250,6 +250,11 @@ main{
         }
         
     }
+    @keyframes side {
+        from{transform: translateY(40px);opacity: 0;}
+        to{transform: translateY(0);opacity: 1;}
+    }
+    
     // ------------------------------------------------------------------
     .fixed-img{
         
@@ -276,12 +281,11 @@ main{
             margin:0;
             .person-img{
                 margin-top: -5%;
-                transform: translateX(-50px);
                 opacity: 0;
                 transition: 1s;
+                transform: translateY(50px);opacity: 0;
                 &.active{
-                    transform: translateX(0);
-                    opacity: 1;
+                transform: translateY(0);opacity: 1;
                 }
             }
             .line-img{
@@ -291,27 +295,36 @@ main{
                 @include style_position_fixed;
                 @include bg_img_style;
                 &.active{
-                    opacity: 1;
+                    animation: line-bg 1s;
+                    animation-fill-mode: forwards;
                 }
             }
             div{
                 @include style_position_fixed;
                 @include bg_img_div;
-                transform: translateX(-100px);
                 opacity: 0;
                 transition: 1.2s;
-                color:#fff;
                 &.active{
-                    transform: translateX(0);
-                    color:#000;
-                    opacity: 1;
+                    animation: textdiv 1s;
+                    animation-fill-mode: forwards;
                 }
 
             }
         }
+        @keyframes person {
+            from{transform: translateY(50px);opacity: 0;}
+            to{}
+        }
+        @keyframes line-bg {
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+        @keyframes textdiv {
+            from{transform: translateX(-100px);opacity: 0;color:#fff;}
+            to{transform: translateX(0);opacity: 1;color:#000;}
+        }
         .bg-img2{
             .person-img{
-                // z-index: 99999999999;
                 margin-top: -5%;
                 transform: translateX(-50px);
                 opacity: 0;
@@ -409,8 +422,9 @@ main{
 
             }
         }
-               
     }
+
+    
     .con1{
         height: 100vh;
         .bigText-1{
@@ -420,18 +434,17 @@ main{
                     overflow: hidden;
                   li{
                     @include bigText_1_Li;
-                    transform: translateY(50px);
                     opacity: 0;
-                    transition: .6s;
                     &.active{
-                        transform: translateY(0);
-                        opacity:1;
+                        animation:con-text 1s;
+                        animation-fill-mode: forwards;
                     }
                 }  
                 }
                 
             }
         }
+        
         .bigText-2{
             @include bigText_2;
             ul{
@@ -439,12 +452,10 @@ main{
                     overflow: hidden;
                     li{
                         @include bigText_2_Li;
-                        transform: translateY(100px);
                         opacity: 0;
-                        transition: .5s;
                         &.active{
-                            transform: translateY(0);
-                            opacity:1;
+                            animation:con-text2 1s;
+                            animation-fill-mode: forwards;
                         }
                     }
                 }
@@ -455,12 +466,10 @@ main{
             ul{
                 li{
                     @include smallText_1_Li;
-                    transform: translateY(50px);
                     opacity: 0;
-                    transition: 1.5s;
                     &.active{
-                        transform: translateY(0);
-                        opacity: 1;
+                        animation:con-text 1.5s;
+                        animation-fill-mode: forwards;
                     }
                 }
             }
@@ -481,12 +490,11 @@ main{
                     overflow: hidden;
                   li{
                     @include bigText_2_Li;
-                    transform: translateY(50px);
                     opacity: 0;
-                    transition: .8s;
                     &.active{
-                        transform: translateY(0);
-                        opacity:1;
+                        animation:con-text2 1s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards;
                     }
                 }  
                 }
@@ -498,12 +506,11 @@ main{
             ul{
                 li{
                     @include smallText_1_Li;
-                    transform: translateY(50px);
                     opacity: 0;
-                    transition: 1.5s;
                     &.active{
-                        transform: translateY(0);
-                        opacity: 1;
+                        animation:con-text 1.5s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards;
                     }
                 }
             }
@@ -524,12 +531,11 @@ main{
                     overflow: hidden;
                   li{
                     @include bigText_2_Li;
-                    transform: translateY(50px);
                     opacity: 0;
-                    transition: .8s;
                     &.active{
-                        transform: translateY(0);
-                        opacity:1;
+                        animation:con-text2 1s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards;
                     }
                 }  
                 }
@@ -540,12 +546,11 @@ main{
             ul{
                 li{
                     @include smallText_1_Li;
-                    transform: translateY(50px);
                     opacity: 0;
-                    transition: 1.5s;
                     &.active{
-                        transform: translateY(0);
-                        opacity: 1;
+                        animation:con-text2 1.5s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards;
                     }
                 }
             }
@@ -566,12 +571,11 @@ main{
                     overflow: hidden;
                   li{
                     @include bigText_2_Li;
-                    transform: translateY(50px);
                     opacity: 0;
-                    transition: .8s;
                     &.active{
-                        transform: translateY(0);
-                        opacity:1;
+                        animation:con-text2 1s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards;
                     }
                 }  
                 }
@@ -582,12 +586,11 @@ main{
             ul{
                 li{
                     @include smallText_1_Li;
-                    transform: translateY(50px);
                     opacity: 0;
-                    transition: 1.5s;
                     &.active{
-                        transform: translateY(0);
-                        opacity: 1;
+                        animation:con-text 1.5s;
+                        animation-delay: .5s;
+                        animation-fill-mode: forwards;
                     }
                 }
             }
@@ -598,6 +601,14 @@ main{
             @include btn_ani;
         }
     }
+}
+@keyframes con-text{
+    from{transform: translateY(50px);opacity: 0;}
+    to{transform: translateY(0);opacity:1;}
+}
+@keyframes con-text2{
+    from{transform: translateY(100px);opacity: 0;}
+    to{transform: translateY(0);opacity:1;}
 }
 
     .port{       
@@ -951,20 +962,25 @@ main{
                     margin:0 auto;
                     font-size: 1rem;
                     font-weight: 300;
-                    .check{
-                        font-size: 1.5rem;
-                        transform: translateX(51px);
-                        cursor: pointer;
-                    }
-                    .checked{
-                        cursor: pointer;
+                    .checkbox{
                         position: absolute;
-                        font-weight: 500;
-                        top:0; right:0;
+                        margin: 0 0 35px 63%;
+                        .check{
                         font-size: 1.5rem;
-                        transform: translate(-185px, -2px);
-                        display: none;
-                        &.active{display: block;}
+                        cursor: pointer;
+                        top:0; right:0;
+                        position: absolute;
+                        }
+                        .checked{
+                            cursor: pointer;
+                            position: absolute;
+                            font-weight: 500;
+                            top:-5px; right:0;
+                            font-size: 1.5rem;
+                            // transform: translate(-50%);
+                            display: none;
+                            &.active{display: block;}
+                        }
                     }
                 }
             }

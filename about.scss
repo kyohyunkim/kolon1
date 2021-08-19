@@ -308,9 +308,6 @@ main{
                     font-size: 1.2rem;
                     width:80%;
                     margin-bottom: 20px;
-                    li{
-
-                    }
                 }
                 .big{
                     font-size: 3rem;
@@ -584,20 +581,7 @@ main{
                         from{height:0;}
                         to{height:100%;}
                     }
-                    .dashed3{
-                        background-image: url('about_img/dashed2.png');
-                        background-repeat: no-repeat;
-                        width:10px; height: 0%;
-                        position:absolute;
-                        top:0; left:0;
-                        margin:13% 0 0 71.8%;
-                        position:absolute;
-                        &.active{
-                            animation: dashed1 4s;
-                            animation-delay: 2s;
-                            animation-fill-mode: forwards;
-                        }
-                    }
+                    
                     
                     @keyframes line{
                         from{width:120px;}
@@ -619,6 +603,8 @@ main{
                             text-align: center;
                             .st-2{
                                 svg{
+                                    z-index: 1;
+                                    background-color: #7da8d5;
                                     position: absolute;
                                     margin:40px 0 0 7px;
                                     transform: rotateZ(-90deg);
@@ -649,6 +635,9 @@ main{
                                 }
                             }
                             .st-3{
+                                position:relative;
+                                z-index: 99;
+                                
                                 width:60px;
                                 margin:85px auto ;
                                 font-size: 1.3rem;  
@@ -675,6 +664,7 @@ main{
                             transform: translateX(0%);  
                             .st-2{
                                 svg{
+                                    background-color: #7da8d5;
                                     position: absolute;
                                     margin:40px 0 0 16%;
                                     text-align: center;
@@ -745,6 +735,7 @@ main{
                             text-align: center;
                             .st-2{
                                 svg{
+                                    background-color: #7da8d5;
                                     position: absolute;
                                     margin:40px 0 0 -25px;
                                     transform: rotateZ(-90deg);
@@ -753,6 +744,10 @@ main{
                                         display: block;
                                     }
                                 }
+                            }
+                            @keyframes svg {
+                                from{display: none;}
+                                to{display: block;}
                             }
                             .st-1{
                                 opacity: 0;
@@ -847,6 +842,7 @@ main{
                 .right{
                     color:#fff;
                     margin:auto;
+                    
                     div{
                         margin-right: 274px;
                         text-align: center;
@@ -855,6 +851,7 @@ main{
                         // background-color: #7da8d5;
                         overflow: hidden;
                         .r-1{
+                            
                             background-color: #7da8d5;
                             margin:10px 0 45px 0;
                             opacity: 0;
@@ -889,7 +886,30 @@ main{
                                 animation-fill-mode: forwards;
                             }
                         }
+                        
                     }
+                    .dashed3{
+                        li{
+                        z-index: -1;
+                        background-image: url('about_img/dashed2.png');
+                        background-repeat: no-repeat;
+                        width:10px; height: 0%;
+                        margin-left: 63.8px;
+                        margin-top: -365px;
+                        position:absolute;
+                        &.active{
+                            animation: dashed2 4s;
+                            animation-delay: 2s;
+                            animation-fill-mode: forwards;
+                        }
+                        @keyframes dashed2{
+                            from{height:0;}
+                            to{height:100%;}
+                        }  
+                        }
+                        
+                    }
+                    
                     div:nth-of-type(1){padding:100px 0 150px 0;}
                     div:nth-of-type(2){padding-bottom: 90px;}
                 }
@@ -1322,21 +1342,28 @@ main{
                     margin:0 auto;
                     font-size: 1rem;
                     font-weight: 300;
-                    .check{
-                        font-size: 1.5rem;
-                        transform: translateX(51px);
-                        cursor: pointer;
-                    }
-                    .checked{
-                        cursor: pointer;
+                    .checkbox{
                         position: absolute;
-                        font-weight: 500;
-                        top:0; right:0;
+                        margin: 0 0 35px 63%;
+                        .check{
                         font-size: 1.5rem;
-                        transform: translate(-185px, -2px);
-                        display: none;
-                        &.active{display: block;}
+                        cursor: pointer;
+                        top:0; right:0;
+                        position: absolute;
+                        }
+                        .checked{
+                            cursor: pointer;
+                            position: absolute;
+                            font-weight: 500;
+                            top:-5px; right:0;
+                            font-size: 1.5rem;
+                            // transform: translate(-50%);
+
+                            display: none;
+                            &.active{display: block;}
+                        }
                     }
+                    
                 }
             }
         }

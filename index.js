@@ -51,18 +51,22 @@
 
     console.log(elA);
 
+    let elCon4Height = elScon4.offsetTop - 200;
+    let elCon3Height = elScon3.offsetTop - 200;
+    let elCon2Height = elScon2.offsetTop - 200;
+
     function load(k){
         window.scrollTo({top:k, behavior:'smooth'});
     };
 
     elA[0].addEventListener('click',function(){
-        load(3704);
+        load(elCon4Height);
     })
     elA[1].addEventListener('click',function(){
-        load(2467);
+        load(elCon3Height);
     })
     elA[2].addEventListener('click',function(){
-        load(1230);
+        load(elCon2Height);
     })
     elA[3].addEventListener('click',function(){
         load(0);
@@ -155,19 +159,18 @@
             elPerson.classList.add('active');
             elLine.classList.add('active');
             elDivtext.classList.add('active');
+            elA[3].classList.add('active');
             
         }
-    }, 800);
-    setTimeout(() => {
-        elSide1.classList.add('active1');
-        elA[3].classList.add('active');
-    }, 800);
+    }, 1000);
     
+        elSide1.classList.add('active1');
+        
 
 
     // 사람/배경/글씨-ani//
     window.addEventListener("scroll",function(){
-
+       
         let winHei = window.innerHeight;
         let elBtnHei = elBtnline.offsetTop;
 
@@ -183,13 +186,13 @@
         
 
         // 자세히보기btn-ani//
-        setTimeout(() => {
+ 
         if(elBtnHei-winHei <= window.scrollY){  
             elBtntext.classList.add('active');             
         }else{
             elBtntext.classList.remove('active');
         }
-        }, 500);
+   
         if(elBtnHei-winHei <= window.scrollY){              
             elBtnline.classList.add('active');   
         }else{
@@ -207,42 +210,40 @@
 
     window.addEventListener("scroll",function(){
 
-    let domHei = document.documentElement.offsetHeight;
     let winHei = window.innerHeight;
     let elCon2Top = elCon2.offsetTop;
-    let elCon2Bottom = elCon2.offsetTop;
     let elBtnHei2 = elBtnline2.offsetTop;
     
     //이미지 에니메이션
     setTimeout(() => {
-        if(elCon2Top*1.4 - winHei <= window.scrollY  && window.scrollY <= elCon2Bottom ){
+        if(elCon2Top + 500 - winHei <= window.scrollY  && window.scrollY <= elCon2Top ){
         elPerson2.classList.add('active');
         elLine2.classList.add('active');
-    }else{
-        elPerson2.classList.remove('active');
-        elLine2.classList.remove('active');
-    };
+        }else{
+            elPerson2.classList.remove('active');
+            elLine2.classList.remove('active');
+        };
     }, 500);
     
     //글씨 에니메이션
-    setTimeout(() => {
+
         for(let i=0; i<elCon2text2.length; i++){
-            if(elCon2Top*1.25 - winHei <= window.scrollY && window.scrollY <= elCon2.offsetTop + 650 ){
+            if(elCon2Top - winHei <= window.scrollY && window.scrollY <= elCon2.offsetTop + 650 ){
                 elCon2text2[i].classList.add('active');
             }else{
                 elCon2text2[i].classList.remove('active');
             }
         }
-    }, 700);
-    setTimeout(() => {
+
+  
         for(let i=0; i<elCon2text3.length; i++){
-            if(elCon2Top*1.25 - winHei <= window.scrollY && window.scrollY <= elCon2.offsetTop + 650 ){
+            if(elCon2Top - winHei <= window.scrollY && window.scrollY <= elCon2.offsetTop + 650 ){
                 elCon2text3[i].classList.add('active');
             }else{
                 elCon2text3[i].classList.remove('active');
             }
         }
-    }, 1000);
+ 
 
     // con2 - 자세히보기 - btn-ani//
     setTimeout(() => {
@@ -271,15 +272,13 @@
 
     window.addEventListener("scroll",function(){
 
-    let domHei = document.documentElement.offsetHeight;
     let winHei = window.innerHeight;
     let elCon3Top = elCon3.offsetTop;
-    let elCon3Bottom = elCon3.offsetTop;
     let elBtnHei3 = elBtnline3.offsetTop;
     
     //이미지 에니메이션
     setTimeout(() => {
-        if(elCon3Top*1.2 - winHei <= window.scrollY  && window.scrollY <= elCon3Bottom ){
+        if(elCon3Top + 500 - winHei <= window.scrollY  && window.scrollY <= elCon3Top ){
             elPerson3.classList.add('active');
             elLine3.classList.add('active');
             elText3.classList.add('active');
@@ -288,27 +287,27 @@
             elLine3.classList.remove('active');
             elText3.classList.remove('active');
         };
-    },100);
+    },500);
     
     //글씨 에니메이션
-    setTimeout(() => {
+ 
         for(let i=0; i<elCon3text2.length; i++){
-            if(elCon3Top + 300 - winHei <= window.scrollY && window.scrollY <= elCon3.offsetTop + 650 ){
+            if(elCon3Top - winHei <= window.scrollY && window.scrollY <= elCon3.offsetTop + 650 ){
                 elCon3text2[i].classList.add('active');
             }else{
                 elCon3text2[i].classList.remove('active');
             }
         }
-    }, 700);
-    setTimeout(() => {
+ 
+  
         for(let i=0; i<elCon3text3.length; i++){
-            if(elCon3Top + 300 - winHei <= window.scrollY && window.scrollY <= elCon3.offsetTop + 650 ){
+            if(elCon3Top - winHei <= window.scrollY && window.scrollY <= elCon3.offsetTop + 650 ){
                 elCon3text3[i].classList.add('active');
             }else{
                 elCon3text3[i].classList.remove('active');
             }
         }
-    }, 1000);
+ 
 
     // con3 - 자세히보기 - btn-ani//
     setTimeout(() => {
@@ -339,7 +338,7 @@
 
     let winHei = window.innerHeight;
     let elCon4Top = elCon4.offsetTop;
-    let elCon4Bottom = elCon4.offsetTop + 100;
+    let elCon4Bottom = elCon4.offsetTop + 400;
     let elBtnHei4 = elBtnline4.offsetTop;
     
     //이미지 에니메이션
@@ -353,28 +352,25 @@
             elLine4.classList.remove('active');
             elText4.classList.remove('active');
     };
-    },300);
+    },500);
     
     //글씨 에니메이션
-    setTimeout(() => {
-
+ 
         for(let i=0; i<elCon4text2.length; i++){
-            if(elCon4Top + 100 - winHei <= window.scrollY){
+            if(elCon4Top - winHei <= window.scrollY){
                 elCon4text2[i].classList.add('active');
             }else{
                 elCon4text2[i].classList.remove('active');
             }
         }
-    }, 700);
-    setTimeout(() => {
+   
         for(let i=0; i<elCon4text3.length; i++){
-            if(elCon4Top + 100 - winHei <= window.scrollY){
+            if(elCon4Top - winHei <= window.scrollY){
                 elCon4text3[i].classList.add('active');
             }else{
                 elCon4text3[i].classList.remove('active');
             }
         }
-    }, 1000);
 
     // con4 - 자세히보기 - btn-ani//
     setTimeout(() => {
