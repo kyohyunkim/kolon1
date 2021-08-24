@@ -214,6 +214,10 @@ main{
         transform: rotate(-90deg);
         top:0; left:0;
         height: 100vh;
+        transition: 1s;
+        &.active{
+            opacity: 0;
+        }
         div{
             overflow:hidden;
            .nav{
@@ -225,9 +229,8 @@ main{
                 animation-delay: 1s;
                 animation-fill-mode: forwards;
             }
-            &.active{
-                opacity: 0;
-            }
+            
+            
                 li{
                     margin-left:50px;
                     display: inline-block;

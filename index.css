@@ -308,6 +308,12 @@ main .side_menu {
   top: 0;
   left: 0;
   height: 100vh;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .side_menu.active {
+  opacity: 0;
 }
 
 main .side_menu div {
@@ -328,10 +334,6 @@ main .side_menu div .nav.active1 {
           animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-main .side_menu div .nav.active {
-  opacity: 0;
 }
 
 main .side_menu div .nav li {

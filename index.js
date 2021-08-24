@@ -1,6 +1,7 @@
     //side-menu------------------------------------------
 
     const elSide = document.querySelector('.side_menu .nav');
+    const elSide2 = document.querySelector('.side_menu');
     const elA = document.querySelectorAll('.side_menu .nav li a');
     const elA1 = document.querySelectorAll('.side_menu .nav li:nth-of-type(1) a');
     const elMain = document.querySelector('main');
@@ -42,11 +43,14 @@
             }else{
                 elA[0].classList.remove('active');
             }
+    
             if(elPortHei-winHei <= window.scrollY){
-                elSide.classList.add('active');
+            elSide2.classList.add('active');
             }else{
-                elSide.classList.remove('active');
-            }
+                elSide2.classList.remove('active');
+            }  
+
+           
     })
 
     console.log(elA);
@@ -353,7 +357,7 @@
             elText4.classList.remove('active');
     };
     },500);
-    
+        
     //글씨 에니메이션
  
         for(let i=0; i<elCon4text2.length; i++){
