@@ -53,11 +53,11 @@
            
     })
 
-    console.log(elA);
+   
 
-    let elCon4Height = elScon4.offsetTop - 200;
-    let elCon3Height = elScon3.offsetTop - 200;
-    let elCon2Height = elScon2.offsetTop - 200;
+    let elCon4Height = elScon4.offsetTop - 150;
+    let elCon3Height = elScon3.offsetTop - elScon3.offsetTop/18;
+    let elCon2Height = elScon2.offsetTop - elScon2.offsetTop/10;
 
     function load(k){
         window.scrollTo({top:k, behavior:'smooth'});
@@ -76,7 +76,7 @@
         load(0);
     })
 
-
+    console.log(elCon2Height);
     
     
     
