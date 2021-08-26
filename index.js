@@ -2,8 +2,8 @@
 
     const elSide = document.querySelector('.side_menu .nav');
     const elSide2 = document.querySelector('.side_menu');
-    const elA = document.querySelectorAll('.side_menu .nav li a');
-    const elA1 = document.querySelectorAll('.side_menu .nav li:nth-of-type(1) a');
+    const elA = document.querySelectorAll('.side_menu .nav li');
+    const elA1 = document.querySelectorAll('.side_menu .nav li:nth-of-type(1)');
     const elMain = document.querySelector('main');
     const elScon2 = document.querySelector('.con2');
     const elScon3 = document.querySelector('.con3');

@@ -339,9 +339,6 @@ main .side_menu div .nav.active1 {
 main .side_menu div .nav li {
   margin-left: 50px;
   display: inline-block;
-}
-
-main .side_menu div .nav li a {
   font-weight: 600;
   cursor: pointer;
   color: #bbb;
@@ -350,7 +347,7 @@ main .side_menu div .nav li a {
   transition: .5s;
 }
 
-main .side_menu div .nav li a.active {
+main .side_menu div .nav li.active {
   font-weight: 600;
   color: #000;
 }
