@@ -2037,7 +2037,7 @@ main .con3 .box-2 .bg .left .dashed2 {
   height: 0%;
   top: 0;
   left: 0;
-  margin: 15.5% 0 0 51.3%;
+  margin: 14% 0 0 51.3%;
   position: absolute;
 }
 
@@ -2244,11 +2244,11 @@ main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line1 {
   left: 0;
   -webkit-transition: 2s;
   transition: 2s;
-  margin: 65% 0 0 -47%;
+  margin: 65% 0 0 -67%;
 }
 
 main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line1.active {
-  width: 143px;
+  width: 200px;
 }
 
 main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line2 {
@@ -2263,7 +2263,7 @@ main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line2 {
 }
 
 main .con3 .box-2 .bg .left .left_con1 .u-2 .st-2 .line2.active {
-  width: 115px;
+  width: 200px;
 }
 
 main .con3 .box-2 .bg .left .left_con1 .u-2 .st-1 {

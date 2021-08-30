@@ -569,7 +569,7 @@ main{
                         background-repeat: no-repeat;
                         width:10px; height: 0%;
                         top:0; left:0;
-                        margin:15.5% 0 0 51.3%;
+                        margin:14% 0 0 51.3%;
                         position:absolute;
                         &.active{
                             animation: dashed1 4s;
@@ -691,9 +691,9 @@ main{
                                     position: absolute;
                                     top:0; left:0;
                                     transition: 2s;
-                                    margin: 65% 0 0 -47%;
+                                    margin: 65% 0 0 -67%;
                                     &.active{
-                                        width:143px;
+                                        width:200px;
                                     }
                                 }
                                 .line2{
@@ -704,7 +704,7 @@ main{
                                     margin: 65% 0 0 81.5%;
                                     transition: 2s;
                                     &.active{
-                                        width:115px;
+                                        width:200px;
                                     }
                                 }
                             }
