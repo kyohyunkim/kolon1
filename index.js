@@ -2,7 +2,7 @@
 
     const elSide = document.querySelector('.side_menu .nav');
     const elSide2 = document.querySelector('.side_menu');
-    const elA = document.querySelectorAll('.side_menu .nav li');
+    const elA = document.querySelectorAll('.side_menu .nav li a');
     const elA1 = document.querySelectorAll('.side_menu .nav li:nth-of-type(1)');
     const elMain = document.querySelector('main');
     const elScon2 = document.querySelector('.con2');
@@ -49,37 +49,9 @@
             }else{
                 elSide2.classList.remove('active');
             }  
-
-           
     })
 
-   
 
-    let elCon4Height = elScon4.offsetTop - 150;
-    let elCon3Height = elScon3.offsetTop - elScon3.offsetTop/18;
-    let elCon2Height = elScon2.offsetTop - elScon2.offsetTop/10;
-
-    function load(k){
-        window.scrollTo({top:k, behavior:'smooth'});
-    };
-
-    elA[0].addEventListener('click',function(){
-        load(elCon4Height);
-    })
-    elA[1].addEventListener('click',function(){
-        load(elCon3Height);
-    })
-    elA[2].addEventListener('click',function(){
-        load(elCon2Height);
-    })
-    elA[3].addEventListener('click',function(){
-        load(0);
-    })
-
-    console.log(elCon2Height);
-    
-    
-    
     // ----------buger-----------------------------------
     const elBuger = document.querySelector('.menu-trigger');
     const elNav = document.querySelector('.nav');
